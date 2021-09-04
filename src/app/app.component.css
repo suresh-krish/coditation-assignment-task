@@ -1,0 +1,130 @@
+.board{
+    padding-left: 33%;
+    padding-top: 8%;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin: -5px;
+}
+.text{
+    padding-left: 40%;
+    padding-top: 2%;
+    color: brown;
+}
+
+.game button{
+    width: 20px;
+    height: 20px;
+
+    background-color: white;
+    border: 1px solid gray
+}
+
+.game button.alive{
+    background-color: rgb(145, 125, 125);
+}
+
+.menu-button{
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  @keyframes moveOne {
+    from {bottom: 2rem; opacity: 0;}
+    to {bottom: 6rem;}
+  }
+  @keyframes moveOneLabel {
+    from {bottom: 2rem; opacity: 0;}
+    to {bottom: 6.5rem;}
+  }
+  
+  @keyframes moveTwo {
+    from {bottom: 2rem; opacity: 0;}
+    to {bottom: 9.5rem;}
+  }
+  @keyframes moveTwoLabel {
+    from {bottom: 2rem; opacity: 0;}
+    to {bottom: 10rem;}
+  }
+  
+  .action-button{
+    position: fixed;
+    right: 2rem;
+    transition-property: opacity;
+  }
+  .label{
+    position: fixed;
+    right: 5rem;
+    left: auto;
+    height: 25px;
+    width: 100px;
+    line-height: 25px;
+    min-height: 25px;
+    vertical-align: top;
+    font-size: 12px;
+    padding: 0 0;
+    margin: 0;
+  }
+  
+  .one{
+    bottom: 6rem;
+    animation: moveOne 0.2s;
+    color: black;
+    background-color: greenyellow;
+  }
+ 
+    
+  .two{
+    bottom: 9.5rem;
+    animation: moveTwo 0.25s;
+    color: black;
+    background-color: red;
+  }
+
+  .three{
+    bottom: 13rem;
+    animation: moveThree 0.25s;
+    color: black;
+    background-color: purple;
+  }
+
+  
+  .alert  {
+    position: fixed;
+    top: 0;
+    right: 50%;
+    border:1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    padding: 2rem;
+    background: #fff;
+    color: #f65656;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+    transition:  all 0.2s ease-in-out;
+    opacity: 0;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(1.25rem);
+  }
+
+  .header{
+      margin-left: 30%;
+      margin-right: 50px;
+
+  }
+
+
+    .mat-form-field{
+        height: 90px;
+    }
+  
+

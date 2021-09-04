@@ -1,0 +1,75 @@
+
+<p>
+  <mat-toolbar color='primary'>
+    <span class="header">
+      <mat-slide-toggle  [checked]="isChecked"  (change) = selectDynamic($event) >Manual / Random</mat-slide-toggle>
+    </span>
+    <!-- <span>My Application</span> -->
+    <mat-form-field appearance="fill" color="white" autocomplete="off" >
+      <mat-label>Cell Name</mat-label>
+      <input matInput type='string' [(ngModel)] = 'cellName' (change)='onNameSelect()'>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </mat-toolbar>
+</p>
+
+
+
+
+
+
+<button mat-fab  (click)="clickMenu()"
+    class="menu-button"
+    [class.mat-elevation-z2]="!isOver"
+    [class.mat-elevation-z8]="isOver"
+    (mouseover)="isOver = true"
+    (mouseleave)="isOver = false">
+  <i class="material-icons" *ngIf="!openMenu">menu</i>
+  <i class="material-icons" *ngIf="openMenu">close</i>
+</button>
+
+<!-- menu button -->
+<button mat-mini-fab
+  class="action-button one mat-elevation-z8"
+  *ngIf="openMenu"
+   (click)="onPause(1)">
+  <!-- <i>play_circle_outline</i> -->
+  <mat-icon>play_circle_outline</mat-icon>
+</button>
+
+
+
+<button mat-mini-fab
+  class="action-button two mat-elevation-z8"
+  *ngIf="openMenu"
+  (click)="onPause(0)">
+  <!-- <i>homeall</i> -->
+  <mat-icon>stop</mat-icon>
+</button>
+
+
+
+
+<div class="board">
+
+<div class="game">
+  <div class="row" *ngFor = 'let row of numRows | numToArr'>
+    <div class="col" *ngFor='let col of numCols | numToArr'>
+      <button class="float" (click)="dab(row,col)" [ngClass]="{alive: board.status(row,col) === 1}"></button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="alert" [class.visible]="isVisible"> 
+  {{result}}
+</div>
+<!-- <div class="text">
+<h1>{{result}}</h1>
+</div> -->
+
+
+
+   
+
+
