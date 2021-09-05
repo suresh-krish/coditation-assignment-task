@@ -23,7 +23,7 @@ When the slide is  “OFF” , the user can manually pick cells and can assign t
 
 Slide ON-
 
-When the slide is “ON”, the program randomly assigns alive or dead states to the cells.
+When the slide is “ON”, the program randomly assigns alive or dead states to the cells and user can also assign the state by clicking the cell.
 
 Start and Stop options (placed in left down corner):
 
